@@ -17,17 +17,17 @@ body {
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two videos per row */
-  grid-template-rows: repeat(2, 1fr);  /* Two rows of videos */
-  gap: 0px; /* Add some spacing between videos */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);  
+  gap: 0px; 
   width: 100vw;
   height: 100vh;
   
 }
 
 .video-grid video {
-  width: 120%; /* Fit each grid cell */
-  height: 100%; /* Fill the height of each grid cell */
+  width: 120%;
+  height: 100%; 
   object-fit: cover; 
 
    

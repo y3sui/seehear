@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Background with Centered Image</title>
+ 
   <style>
     * {
       margin: 0;
@@ -18,7 +18,7 @@
       align-items: center;
       background-color: black;
       overflow: hidden;
-      cursor: url(../css/eye2.png) 70 70, auto;
+      cursor: url(../css/eye2.png) 40 40, auto;
     }
 
     .video-background {
@@ -27,15 +27,14 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Ensures the video fills the screen without distortion */
-      z-index: -1; /* Places the video behind other elements */
-      cursor: pointer; /* Indicates interactivity */
-    }
+      object-fit: cover; 
+      z-index: -1; 
+      cursor: pointer; 
 
     .centered-image {
       position: relative;
-      z-index: 1; /* Places the image above the video */
-      width: 100%; /* Adjust the size of the image */
+      z-index: 1;
+      width: 100%;
       max-width: 900px;
       height: auto;
 
@@ -43,7 +42,7 @@
 
     @media (max-width: 768px) {
       .centered-image {
-        width: 30%; /* Adjust size for smaller screens */
+        width: 30%;
       }
     }
   </style>
@@ -58,7 +57,7 @@
 
   <script>
     function toggleMute(videoElement) {
-      videoElement.muted = !videoElement.muted; // Toggle mute state
+      videoElement.muted = !videoElement.muted; 
     }
   </script>
 </body>
