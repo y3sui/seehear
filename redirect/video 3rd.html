@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/cursor.css">
+  <title>2-Column Video Layout</title>
+  <style>
+        html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Prevent scrolling */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+    }
+
+    .video-container {
+      display: flex;
+      gap: 5px;
+      width:100%;
+      height: 100%;
+      align-items: center; /* Space between columns */
+      justify-content: center;
+    }
+    .video-column {
+      flex: 1, 1; /* Each column takes up equal space */
+      height: 100;
+    }
+    video {
+      width: 100%; 
+      cursor: pointer; 
+      object-fit: cover;
+      cursor: url(../css/ear1.png) 50 0, auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="video-container">
+  <div class="video-column">
+    <video autoplay loop muted src="../videos/wedding2.mp4" onclick="toggleMute(this)"></video>
+  </div>
+  <div class="video-column">
+    <video autoplay loop muted src="../videos/wedding3.mp4" onclick="toggleMute(this)"></video>
+  </div>
+</div>
+
+<script>
+  function toggleMute(videoElement) {
+    videoElement.muted = !videoElement.muted; // Toggle the muted state
+    console.log(`Muted: ${videoElement.muted}`);
+  }
+</script>
+
+</body>
+</html>

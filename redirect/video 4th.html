@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Video Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    .video-container {
+      margin: 5px;
+    }
+
+    video {
+      width: 800px; /* You can adjust this to your desired video size */
+      height: auto;
+      object-fit: cover;
+      cursor: pointer; 
+      cursor: url(../css/ear1.png) 50 50, auto;/* Shows pointer to indicate interactivity */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-container">
+    <video src="../videos/bird.mp4" autoplay muted loop></video>
+  </div>
+
+  <div class="video-container">
+    <video src="../videos/rabbit.mp4" autoplay muted loop></video>
+  </div>
+
+  <script>
+    // Select all video elements
+    const videos = document.querySelectorAll('video');
+
+    // Add an event listener to each video for click to toggle mute
+    videos.forEach(video => {
+      video.addEventListener('click', () => {
+        video.muted = !video.muted; // Toggle the muted state
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+

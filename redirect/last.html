@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Background with Centered Image</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      overflow: hidden;
+      cursor: url(../css/eye2.png) 70 70, auto;
+    }
+
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the video fills the screen without distortion */
+      z-index: -1; /* Places the video behind other elements */
+      cursor: pointer; /* Indicates interactivity */
+    }
+
+    .centered-image {
+      position: relative;
+      z-index: 1; /* Places the image above the video */
+      width: 100%; /* Adjust the size of the image */
+      max-width: 900px;
+      height: auto;
+
+    }
+
+    @media (max-width: 768px) {
+      .centered-image {
+        width: 30%; /* Adjust size for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <video class="video-background" autoplay muted loop onclick="toggleMute(this)">
+    <source src="../videos/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <img src="https://i.pinimg.com/736x/fc/43/f1/fc43f1fbf3782d58503a65cbb799147b.jpg" alt="Centered Image" class="centered-image">
+
+  <script>
+    function toggleMute(videoElement) {
+      videoElement.muted = !videoElement.muted; // Toggle mute state
+    }
+  </script>
+</body>
+</html>

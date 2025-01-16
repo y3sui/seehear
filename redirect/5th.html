@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2-Column Image Grid</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+      gap: 1px; /* Space between images */
+      width: 90%;
+      height: 90%;
+      max-width: 1200px; /* Maximum width */
+      max-height: 800px; /* Maximum height */
+    }
+
+    .grid-item {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: url(../css/eye2.png) 50 50, auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <!-- Grid Item 1 -->
+    <div class="grid-item">
+      <img src="https://i.pinimg.com/736x/e1/2e/57/e12e57f83645c7d8a5dff95d3a287751.jpg" alt="Image 1">
+    </div>
+
+    <!-- Grid Item 2 -->
+    <div class="grid-item">
+      <img src="https://i.pinimg.com/736x/1c/49/25/1c4925f9f059fca31546dc9e6a473cb5.jpg" alt="Image 2">
+    </div>
+  </div>
+
+</body>
+</html>

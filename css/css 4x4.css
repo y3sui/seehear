@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  cursor: url(../css/ear1.png) 50 50, auto;
+ }
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two videos per row */
+  grid-template-rows: repeat(2, 1fr);  /* Two rows of videos */
+  gap: 0px; /* Add some spacing between videos */
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+.video-grid video {
+  width: 120%; /* Fit each grid cell */
+  height: 100%; /* Fill the height of each grid cell */
+  object-fit: cover; 
+
+   
+}
+

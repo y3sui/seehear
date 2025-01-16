@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Images</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black; /* Optional for contrast */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center images horizontally */
+            justify-content: flex-start; /* Align images to the top */
+            height: 100vh;
+        }
+
+        img {
+            max-width: 100%; /* Scale image width responsively */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px;
+            cursor: url(../css/eye2.png) 40 40, auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.pinimg.com/474x/93/5b/db/935bdb3a8183e6b5e6843159bc902cd5.jpg" alt="Image 1">
+    <img src="https://i.pinimg.com/736x/89/6a/d9/896ad9798b5f96c5f73125a9a8495eb1.jpg" alt="Image 2">
+    <img src="https://i.pinimg.com/736x/45/16/a5/4516a5f41ad688839ad60aea187702c8.jpg" alt="Image 3">
+    <img src="https://i.pinimg.com/736x/30/9a/ed/309aed0f2da2abb1d7bf17384825d22f.jpg" alt="Image 4">
+</body>
+</html>
